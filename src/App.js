@@ -1,21 +1,45 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+    ThemeProvider,
+    theme,
+    CSSReset,
+    TabList,
+    Tab,
+    Tabs,
+    Heading, TabPanels, TabPanel,
+} from '@chakra-ui/react';
+import Links from './pages/Links';
+import Images from './pages/Images';
+// import References from './pages/References';
 
-class App extends Component {
-  render() {
+
+export default function App() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <ThemeProvider theme={theme}>
+            <CSSReset/>
+            <Heading textAlign="center">piperaceae-dataset</Heading>
+            {/*<VStack width="full" alignItems="center" justifyContent="center">*/}
+            <Tabs size="md" variant="enclosed">
+                <TabList>
+                    <Tab>Paper</Tab>
+                    <Tab>Links</Tab>
+                    <Tab>Images</Tab>
+                </TabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Images/>
+                    </TabPanel>
+                    <TabPanel>
+                        <Links/>
+                    </TabPanel>
+                    <TabPanel>
+                        <Images/>
+                    </TabPanel>
+                </TabPanels>
+            </Tabs>
+            {/*<Selects/>*/}
+            {/*    <References/>*/}
+            {/*</VStack>*/}
+        </ThemeProvider>
     );
-  }
 }
-
-export default App;
