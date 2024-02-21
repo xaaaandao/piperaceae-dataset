@@ -33,7 +33,9 @@ function getExsiccataSegmentedUNet() {
                 <Image src={ExsiccataMaskUNet}/>
             </VStack>
             <VStack>
-                <Text fontSize="2xl"> Exsiccata segmented </Text>
+                <Box width="110%">
+                    <Text fontSize="2xl"> Exsiccata segmented </Text>
+                </Box>
                 <Image src={ExsiccataUNet}/>
             </VStack>
         </Stack>
@@ -52,7 +54,9 @@ function getExsiccataSegmentedManual() {
                 <Image src={ExsiccataMaskManual}/>
             </VStack>
             <VStack>
-                <Text fontSize="2xl"> Exsiccata segmented</Text>
+                <Box width="110%">
+                    <Text fontSize="2xl"> Exsiccata segmented </Text>
+                </Box>
                 <Image src={ExsiccataManual}/>
             </VStack>
         </Stack>
@@ -93,13 +97,11 @@ export default function Images() {
                 <Text align="justify">
                     All the images used in the experiments are available in <Link style={{color: "blue"}}
                                                                                   href="https://specieslink.net/">speciesLink</Link>.
-                    It's collected in Brazil and selected with the help of a specialist. In this <Link as={RouterLink} to={"/samples"}>link</Link>, we make available the list of samples used. Figure 1 is an example of the exsiccata of Herbaria.
+                    It's collected in Brazil and selected with the help of a specialist. In this <Link href="/samples">link</Link>, we make available the list of samples used. Figure 1 is an example of the exsiccata of Herbaria.
                 </Text>
-                <Box width="40%">
-                    <Text align="center"><strong>Figure 1</strong> This exsiccata from Herbarium is an example of
-                        Piperaceae
-                        family.</Text>
-                    <Image aspectRatio={3 / 4} src={ExampleExsiccata}/>
+                <Box width="40%" align="center" justifyContent="center">
+                    <Text><strong>Figure 1</strong> This exsiccata from Herbarium is an example of Piperaceae family.</Text>
+                    <Image width="60%" height="60%" src={ExampleExsiccata}/>
                 </Box>
                 <Divider orientation='horizontal'/>
                 <Heading size="lg" mb={5}>Images segmented</Heading>
@@ -113,7 +115,7 @@ export default function Images() {
                     </Text>
                     {getTableUNet()}
                 </Box>
-                <Box width="60%">
+                <Box width="40%">
                     <Text align="center">
                         <strong>Figure 2</strong>
                     </Text>

@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/react';
 import Links from './pages/Links';
 import Images from './pages/Images';
-// import References from './pages/References';
 
 
 export default function App() {
@@ -37,9 +36,6 @@ export default function App() {
                     </TabPanel>
                 </TabPanels>
             </Tabs>
-            {/*<Selects/>*/}
-            {/*    <References/>*/}
-            {/*</VStack>*/}
         </ThemeProvider>
     );
 }

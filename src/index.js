@@ -3,8 +3,9 @@ import React, {StrictMode} from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom';
+// import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+// import Samples from "./pages/Samples";
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -12,14 +13,12 @@ const root = ReactDOM.createRoot(container);
 root.render(
     <StrictMode>
         <ColorModeScript/>
-        <BrowserRouter>
+        {/*<BrowserRouter>*/}
             <App/>
-        </BrowserRouter>
-        {/*<Switch>*/}
-        {/*    <Route path="/samples">*/}
-        {/*        <Samples/>*/}
-        {/*    </Route>*/}
-        {/*</Switch>*/}
+        {/*    <Routes>*/}
+        {/*        <Route exact path="/samples" element={<Samples />}/>*/}
+        {/*    </Routes>*/}
+        {/*</BrowserRouter>*/}
     </StrictMode>
 );
 

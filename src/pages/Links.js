@@ -17,6 +17,8 @@ import {
 } from '@chakra-ui/react';
 import '@fontsource/courier-prime';
 import {getStructureOfImagesZip, getStructureOfFeaturesZip} from "./StructureFile";
+import Papa from "papaparse";
+
 
 const datasets = [
     {value: 'br', label: 'BR'},
@@ -56,12 +58,19 @@ const regions = [
 
 export default function Links() {
     const [selectsEmpty, setSelectsEmpty] = useState('');
-    const handleClick = () => {
+    const handleClick = async () => {
         if (dataset === '' || type === '' || minimum === '' || color === '' || size === '') {// || region===''){
             setSelectsEmpty(true);
         } else {
             setSelectsEmpty(false);
         }
+        const csv = await fetch("/a.csv").then(res => res.text());
+        Papa.parse( csv, {
+            download: true,
+            complete: function(results, file) {
+                console.log("Parsing complete:", results, file);
+            }
+        });
     };
     const [dataset, setDataset] = useState('');
     const handleChangeDataset = (event) => {
@@ -143,11 +152,10 @@ export default function Links() {
                 {selectsEmpty === false && showLink()}
                 {selectsEmpty && (showAlert())}
                 <Button onClick={handleClick}>Get the URL!</Button>
-                {/*</Box>*/}
                 {getStructureOfImagesZip()}
                 {getStructureOfFeaturesZip()}
-            </Stack>
 
+            </Stack>
         </Box>
 
     );
