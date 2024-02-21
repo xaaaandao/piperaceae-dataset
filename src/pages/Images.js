@@ -13,7 +13,13 @@ import ExsiccataMaskUNet from '../figures/HUEFS0214753_mask_unet.jpg';
 import ExsiccataManual from '../figures/HUEFS0214753_manual.jpeg';
 import ExsiccataUNet from '../figures/HUEFS0214753_unet.jpeg';
 import '@fontsource/courier-prime';
+import {
+    NavLink as RouterLink // <-- import the NavLink component
+} from "react-router-dom";
 
+// <ChakraLink as={ReactRouterLink} to='/home'>
+//     Home
+//     </ChakraLink>
 
 function getExsiccataSegmentedUNet() {
     return (
@@ -87,8 +93,7 @@ export default function Images() {
                 <Text align="justify">
                     All the images used in the experiments are available in <Link style={{color: "blue"}}
                                                                                   href="https://specieslink.net/">speciesLink</Link>.
-                    It's collected in Brazil and selected with the help of a specialist. In this link, we make available
-                    the list of samples used. Figure 1 is an example of the exsiccata of Herbaria.
+                    It's collected in Brazil and selected with the help of a specialist. In this <Link as={RouterLink} to={"/samples"}>link</Link>, we make available the list of samples used. Figure 1 is an example of the exsiccata of Herbaria.
                 </Text>
                 <Box width="40%">
                     <Text align="center"><strong>Figure 1</strong> This exsiccata from Herbarium is an example of
