@@ -80,8 +80,6 @@ function getTableUNet() {
 }
 
 export default function Images() {
-
-
     return (
         // <Box ml={2}>
         <Box ml={2}>
