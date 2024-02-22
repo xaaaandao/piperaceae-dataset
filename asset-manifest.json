@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/piperaceae-dataset/static/css/main.76e22ffb.css",
-    "main.js": "/piperaceae-dataset/static/js/main.3963c824.js",
-    "static/js/453.beb49c0a.chunk.js": "/piperaceae-dataset/static/js/453.beb49c0a.chunk.js",
-    "static/media/info_samples.csv": "/piperaceae-dataset/static/media/info_samples.d73d42ec528135acc761.csv",
+    "main.js": "/piperaceae-dataset/static/js/main.9339f0c9.js",
+    "static/js/453.43470b83.chunk.js": "/piperaceae-dataset/static/js/453.43470b83.chunk.js",
     "static/media/HUEFS0214753.jpg": "/piperaceae-dataset/static/media/HUEFS0214753.d7d85acdeccc0600c606.jpg",
     "static/media/HUEFS0214753.jpeg": "/piperaceae-dataset/static/media/HUEFS0214753.7eca21d0b4ce46ec7a53.jpeg",
     "static/media/HUEFS0214753_manual.jpeg": "/piperaceae-dataset/static/media/HUEFS0214753_manual.00b152f85438feb77cc2.jpeg",
@@ -15,13 +14,12 @@
     "static/media/HUEFS0214753_mask_unet.jpg": "/piperaceae-dataset/static/media/HUEFS0214753_mask_unet.7059528aa44b78edce72.jpg",
     "static/media/courier-prime-latin-ext-400-normal.woff": "/piperaceae-dataset/static/media/courier-prime-latin-ext-400-normal.8cafd33ca5a5ca88061d.woff",
     "index.html": "/piperaceae-dataset/index.html",
-    "static/media/info_dataset.csv": "/piperaceae-dataset/static/media/info_dataset.450045bed10dd56d9cb4.csv",
     "main.76e22ffb.css.map": "/piperaceae-dataset/static/css/main.76e22ffb.css.map",
-    "main.3963c824.js.map": "/piperaceae-dataset/static/js/main.3963c824.js.map",
-    "453.beb49c0a.chunk.js.map": "/piperaceae-dataset/static/js/453.beb49c0a.chunk.js.map"
+    "main.9339f0c9.js.map": "/piperaceae-dataset/static/js/main.9339f0c9.js.map",
+    "453.43470b83.chunk.js.map": "/piperaceae-dataset/static/js/453.43470b83.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76e22ffb.css",
-    "static/js/main.3963c824.js"
+    "static/js/main.9339f0c9.js"
   ]
 }
