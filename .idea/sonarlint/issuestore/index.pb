@@ -150,3 +150,12 @@ W
 'src/data/pr_dataset/20/info_dataset.csv,e/3/e37b7003cccf281276daa4695c6f3e223508caf1
 `
 0src/data/regions_dataset/North/5/info_levels.csv,d/4/d4c22962365383dab7d2db1097d4e636bb0529ca
+M
+src/utils/images/datasetbr.js,8/0/80c311d0a5cce883d5390bcfb6372511c6830933
+<
+src/logo.svg,6/d/6d3a8cd532ece5b4ddbd4b3b6a678ba686d300bc
+=
+src/index.css,c/5/c5d38a62d1faae90a2acaa34b79a7ef365c917e4
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

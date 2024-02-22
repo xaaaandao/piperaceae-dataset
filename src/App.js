@@ -14,11 +14,11 @@ import Paper from './pages/Paper';
 
 
 export default function App() {
+    document.title="piperaceae-dataset"
     return (
         <ThemeProvider theme={theme}>
             <CSSReset/>
             <Heading textAlign="center">piperaceae-dataset</Heading>
-            {/*<VStack width="full" alignItems="center" justifyContent="center">*/}
             <Tabs size="md" variant="enclosed">
                 <TabList>
                     <Tab>Paper</Tab>
