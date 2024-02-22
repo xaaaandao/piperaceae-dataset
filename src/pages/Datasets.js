@@ -1,7 +1,7 @@
 import {getDataset as getDatasetBr} from '../utils/datasetbr';
 import {getDataset as getDatasetPr} from '../utils/datasetpr';
 // import {getDataset as getDatasetRegion} from '../utils/datasetRegion';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Alert,
     AlertTitle,
@@ -99,7 +99,10 @@ function selectBase(handle, items, placeholder, title, value, disable = false) {
     </FormControl>;
 }
 
+
+
 export default function Datasets() {
+    const [data,setData] = useState([]);
     const [selectsEmpty, setSelectsEmpty] = useState('');
     const [dataset, setDataset] = useState("");
     const [disableRegionSelect, setDisableRegionSelect] = useState(true);
@@ -142,6 +145,20 @@ export default function Datasets() {
         setRegion(event.target.value);
     };
 
+    const getData = ()=>{
+        const header = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        };
+        fetch('http://localhost:3000/piperaceae-dataset/data/br_dataset/5/info_samples.json')
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error(error))
+    };
+
+    useEffect(() => {
+        getData()
+    }, []);
 
     return (
         <Box>
@@ -162,6 +179,9 @@ export default function Datasets() {
                 <Divider my={2}/>
                 {type === "images" && getStructureOfImagesZip()}
                 {type === "features" && getStructureOfFeaturesZip()}
+                {data.map((d) => {
+                    console.log(d);
+                })}
             </Stack>
         </Box>
     );
