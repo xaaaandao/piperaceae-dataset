@@ -11,7 +11,11 @@ export default function Paper() {
     return (
         <Box ml={2}>
             <Stack direction="column" spacing={5}>
-                <Text align="justify" mt={4}>
+                <Heading size="sm">
+                    This page provides details and links to download the data (images and features) of the work entitled a.
+                </Heading>
+                <Heading>Abstract</Heading>
+                <Text align="justify">
                     The collections of more than 3,500 herbaria in the world hold about 400 million specimens. Despite
                     millions of specimens being digitized, thousands of plants have yet to be appropriately identified
                     or reviewed because of the complex and time-consuming classification and the relatively low number

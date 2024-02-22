@@ -13,12 +13,14 @@ import {
     Select,
     Stack,
     FormControl,
-    Button, Table, TableContainer, Thead, Tr, Th, Tbody, Td,
+    Text,
+    Button, Table, TableContainer, Thead, Tr, Th, Tbody, Td, Divider, Heading, UnorderedList,
 } from '@chakra-ui/react';
 import '@fontsource/courier-prime';
 import {getStructureOfImagesZip, getStructureOfFeaturesZip} from "./StructureFile";
 import * as d3 from 'd3';
-import csvSamples from '../data/info_samples.csv';
+import BrSamples5 from '../data/br_dataset/5/info_samples.csv';
+import BrDataset5 from '../data/br_dataset/5/info_dataset.csv';
 
 const datasets = [
     {value: 'br', label: 'BR'},
@@ -57,33 +59,61 @@ const regions = [
 ];
 
 
+function TheadSamplesTable() {
+    return <Tr>
+        <Th>seq</Th>
+        <Th>genus_trusted</Th>
+        <Th>specific_epithet_trusted</Th>
+    </Tr>;
+}
+
 export default function Links() {
     const [samples, setSamples] = useState([]);
+    const [levels, setLevels] = useState(0);
+    const [total, setTotal] = useState(0);
     const samplesTable = () => {
-        return (<TableContainer>
-            <Table variant='striped' colorScheme='teal'>
-                <Thead>
-                    <Tr>
-                        <Th>seq</Th>
-                        <Th>genus_trusted</Th>
-                        <Th>specific_epithet_trusted</Th>
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    {
-                        samples.slice(0, 10).map((s) => {
-                            return (
-                                <Tr key={s.seq}>
-                                    <Td>{s.seq}</Td>
-                                    <Td>{s.genus_trusted}</Td>
-                                    <Td>{s.specific_epithet_trusted}</Td>
-                                </Tr>
-                            );
-                        })
-                    }
-                </Tbody>
-            </Table>
-        </TableContainer>);
+        function getThead() {
+            return <Tr>
+                <Th>seq</Th>
+                <Th>genus</Th>
+                <Th>specie</Th>
+                <Th>urls</Th>
+            </Tr>;
+        }
+
+        function getSamples() {
+            return samples.slice(0, 10).map((s) => {
+                return (<Tr key={s.seq}>
+                    <Td>{s.seq}</Td>
+                    <Td>{s.genus_trusted}</Td>
+                    <Td>{s.specific_epithet_trusted}</Td>
+                    <Td>{s.urls}</Td>
+                </Tr>);
+            });
+        }
+
+        function getSamplesT() {
+            return (
+                <TableContainer>
+                    <Table variant='striped' colorScheme='teal'>
+                        <Thead>
+                            {getThead()}
+                        </Thead>
+                        <Tbody>
+                            {getSamples()}
+                        </Tbody>
+                    </Table>
+                </TableContainer>);
+        }
+
+        return (
+            <>
+                <Heading>Samples used</Heading>
+                <Text>This table shows a part of the samples used. More details download this <Link
+                    style={{color: "blue"}}>file</Link>.</Text>
+                {getSamplesT()}
+            </>
+        );
     }
     const [selectsEmpty, setSelectsEmpty] = useState('');
     const handleClick = () => {
@@ -91,16 +121,25 @@ export default function Links() {
             setSelectsEmpty(true);
         } else {
             setSelectsEmpty(false);
-        }
-        d3.csv(csvSamples).then((datas) => {
-            datas.map((d) => {
-                samples.push({
-                    seq: d.seq,
-                    genus_trusted: d.genus_trusted,
-                    specific_epithet_trusted: d.specific_epithet_trusted
+            d3.csv(BrSamples5).then((datas) => {
+                datas.map((d) => {
+                    samples.push({
+                        seq: d.seq,
+                        genus_trusted: d.genus_trusted,
+                        specific_epithet_trusted: d.specific_epithet_trusted,
+                        urls: d.urls.toString()
+                    });
+                })
+            })
+            d3.csv(BrDataset5).then((datas) => {
+                datas.map((d) => {
+                    setLevels(d.levels);
+                    // console.log(d.total)
+                    setTotal(d.total);
                 });
             })
-        })
+        }
+
     };
     const [dataset, setDataset] = useState('');
     const handleChangeDataset = (event) => {
@@ -148,7 +187,8 @@ export default function Links() {
             <Alert status="info" justifyContent="center">
                 <AlertIcon/>
                 <AlertTitle>I found the link!</AlertTitle>
-                <AlertDescription>Your <Link href={getLink()} isExternal>link</Link> to download.</AlertDescription>
+                <AlertDescription>Your <Link href={getLink()} isExternal>link</Link> to download. This dataset contains <strong>{total}</strong> samples divided
+                    in <strong>{levels}</strong> species.</AlertDescription>
             </Alert>
         );
     };
@@ -182,10 +222,11 @@ export default function Links() {
                 {selectsEmpty === false && showLink()}
                 {selectsEmpty && showAlert()}
                 <Button onClick={handleClick}>Get the URL!</Button>
-                {getStructureOfImagesZip()}
-                {getStructureOfFeaturesZip()}
-
-                {selectsEmpty && samplesTable()}
+                <Divider my={2}/>
+                {type === "images" && getStructureOfImagesZip()}
+                {type === "features" && getStructureOfFeaturesZip()}
+                <Divider my={2}/>
+                {selectsEmpty === false && samplesTable()}
             </Stack>
         </Box>
 

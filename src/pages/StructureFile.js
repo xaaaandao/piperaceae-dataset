@@ -1,4 +1,4 @@
-import {Box, HStack, Text, VStack} from "@chakra-ui/react";
+import {Box, Heading, HStack, Text, VStack} from "@chakra-ui/react";
 import React from "react";
 import {AiFillFolderOpen} from "react-icons/ai";
 
@@ -10,10 +10,13 @@ function getFolder(isSubFolder, text) {
 
 function getStructure(items, type) {
     return <Box>
+        <Heading>
+            Structure file
+        </Heading>
         <Text>
             The structure of the zip {type} file:
         </Text>
-        <Box style={{backgroundColor: "#CCCCCC"}}>
+        <Box style={{backgroundColor: "#F6F6F6"}}>
             <VStack my={4} alignItems="left">
                 {items.map((i) => {
                     return getFolder(i.isSubFolder, i.name);
