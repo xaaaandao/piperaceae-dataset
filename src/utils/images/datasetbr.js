@@ -7,7 +7,7 @@ function getImagesRgb256(minimum) {
         case '20':
             return 'https://www.uol.com.br';
         default:
-            console.error('minimum is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -20,7 +20,7 @@ function getImagesRgb400(minimum) {
         case '20':
             return 'https://www.uol.com.br';
         default:
-            console.error('minimum is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -33,7 +33,7 @@ function getImagesRgb512(minimum) {
         case '20':
             return 'https://www.uol.com.br';
         default:
-            console.error('minimum is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -46,7 +46,7 @@ function getImagesRgb(minimum, size) {
         case '512':
             return getImagesRgb512(minimum);
         default:
-            console.error('image size is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -59,7 +59,7 @@ function getImagesGrayscale256(minimum) {
         case '20':
             return 'https://www.uol.com.br';
         default:
-            console.error('minimum is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -72,7 +72,7 @@ function getImagesGrayscale400(minimum) {
         case '20':
             return 'https://www.uol.com.br';
         default:
-            console.error('minimum is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -85,7 +85,7 @@ function getImagesGrayscale512(minimum) {
         case '20':
             return 'https://www.uol.com.br';
         default:
-            console.error('minimum is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -98,7 +98,7 @@ function getImagesGrayscale(minimum, size) {
         case '512':
             return getImagesGrayscale512(minimum);
         default:
-            console.error('image size is invalid.');
+            console.log("option invalid");
     }
 }
 
@@ -109,6 +109,6 @@ export default function getImages(color, minimum, size) {
         case 'grayscale':
             return getImagesGrayscale(minimum, size);
         default:
-            console.error('color of images is invalid.');
+            console.log("option invalid");
     }
 }

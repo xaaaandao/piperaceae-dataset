@@ -8,7 +8,7 @@ import {
     Tabs,
     Heading, TabPanels, TabPanel,
 } from '@chakra-ui/react';
-import Links from './pages/Links';
+import Datasets from './pages/Datasets';
 import Images from './pages/Images';
 import Paper from './pages/Paper';
 
@@ -22,7 +22,7 @@ export default function App() {
             <Tabs size="md" variant="enclosed">
                 <TabList>
                     <Tab>Paper</Tab>
-                    <Tab>Links</Tab>
+                    <Tab>Datasets</Tab>
                     <Tab>Images</Tab>
                 </TabList>
                 <TabPanels>
@@ -30,7 +30,7 @@ export default function App() {
                         <Paper/>
                     </TabPanel>
                     <TabPanel>
-                        <Links/>
+                        <Datasets/>
                     </TabPanel>
                     <TabPanel>
                         <Images/>

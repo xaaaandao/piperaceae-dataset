@@ -4,6 +4,7 @@ import {
     Heading,
     Stack,
     VStack,
+    TableCaption,
     Text, TableContainer, Table, Thead, Th, Tbody, Tr, Td, Link, Divider,
 } from '@chakra-ui/react';
 import ExampleExsiccata from '../figures/HUEFS0214753.jpg';
@@ -13,107 +14,78 @@ import ExsiccataMaskUNet from '../figures/HUEFS0214753_mask_unet.jpg';
 import ExsiccataManual from '../figures/HUEFS0214753_manual.jpeg';
 import ExsiccataUNet from '../figures/HUEFS0214753_unet.jpeg';
 import '@fontsource/courier-prime';
+import {captionFigure, introductionTextPage, unetText} from "./texts/TextImage";
 
-function getExsiccataSegmentedUNet() {
+function layoutExampleExsiccata(exsiccataResized, exsiccataMask, exsiccataUNet, isManual = false) {
     return (
         <Stack direction="row" spacing={4}>
             <VStack>
                 <Text fontSize="2xl"> Image resized </Text>
-                <Image src={ExsiccataResized}/>
+                <Image src={exsiccataResized}/>
             </VStack>
             <VStack>
-                <Text fontSize="2xl"> Mask U-Net </Text>
-                <Image src={ExsiccataMaskUNet}/>
+                <Text fontSize="2xl"> Mask {isManual ? "manual" : "U-Net"} </Text>
+                <Image src={exsiccataMask}/>
             </VStack>
             <VStack>
                 <Box width="110%">
                     <Text fontSize="2xl"> Exsiccata segmented </Text>
                 </Box>
-                <Image src={ExsiccataUNet}/>
+                <Image src={exsiccataUNet}/>
             </VStack>
         </Stack>
     );
 }
 
-function getExsiccataSegmentedManual() {
-    return (
-        <Stack direction="row" spacing={4}>
-            <VStack>
-                <Text fontSize="2xl"> Image resized </Text>
-                <Image src={ExsiccataResized}/>
-            </VStack>
-            <VStack>
-                <Text fontSize="2xl"> Mask manual </Text>
-                <Image src={ExsiccataMaskManual}/>
-            </VStack>
-            <VStack>
-                <Box width="110%">
-                    <Text fontSize="2xl"> Exsiccata segmented </Text>
-                </Box>
-                <Image src={ExsiccataManual}/>
-            </VStack>
-        </Stack>
-    );
-}
-
-function getTableUNet() {
-    const values = [
+function tableUNet() {
+    const hyperparameters = [
         {hyperparameter: "Batch", value: 4},
         {hyperparameter: "Epoch", value: 75},
         {hyperparameter: "Learning rate", value: 0.001}
-    ]
-    return <TableContainer>
+    ];
+    return (<TableContainer>
         <Table size='sm'>
+            <TableCaption><strong>Table 1</strong>: Main hyperparameters used in the U-Net</TableCaption>
             <Thead>
                 <Th>Hyperparameter</Th>
                 <Th>Value</Th>
             </Thead>
             <Tbody>
-                {values.map((v) => {
-                    return (
-                        <Tr key={v.hyperparameter}>
-                            <Td>{v.hyperparameter}</Td>
-                            <Td>{v.value}</Td>
-                        </Tr>
-                    );
-                })}
+                {
+                    hyperparameters.map((v) => {
+                        return (
+                            <Tr key={v.hyperparameter}>
+                                <Td>{v.hyperparameter}</Td>
+                                <Td>{v.value}</Td>
+                            </Tr>
+                        );
+                    })}
             </Tbody>
         </Table>
-    </TableContainer>;
+    </TableContainer>);
 }
 
 export default function Images() {
     return (
-        // <Box ml={2}>
         <Box ml={2}>
             <Stack direction="column" spacing={5}>
-                <Text align="justify">
-                    All the images used in the experiments are available in <Link style={{color: "blue"}}
-                                                                                  href="https://specieslink.net/">speciesLink</Link>.
-                    It's collected in Brazil and selected with the help of a specialist. Figure 1 is an example of the exsiccata of Herbaria.
-                </Text>
-                <Box width="40%" align="center" justifyContent="center">
-                    <Text><strong>Figure 1</strong> This exsiccata from Herbarium is an example of Piperaceae family.</Text>
+                {introductionTextPage}
+                <Box width="50%" align="center" justifyContent="center">
+                    {captionFigure}
                     <Image width="60%" height="60%" src={ExampleExsiccata}/>
                 </Box>
                 <Divider orientation='horizontal'/>
                 <Heading size="lg" mb={5}>Images segmented</Heading>
-                <Text align="justify">
-                    The available samples were segmented using the U-Net. The train was made using the dataset [1]. The
-                    best hyperparameters of U-Net are available in Table 1.
-                </Text>
+                {unetText}
                 <Box width="40%" alignItems="center">
-                    <Text align="center">
-                        <strong>Table 1</strong>
-                    </Text>
-                    {getTableUNet()}
+                    {tableUNet()}
                 </Box>
                 <Box width="40%">
                     <Text align="center">
                         <strong>Figure 2</strong>
                     </Text>
-                    {getExsiccataSegmentedUNet()}
-                    {getExsiccataSegmentedManual()}
+                    {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskUNet, ExsiccataUNet)}
+                    {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskManual, ExsiccataMaskManual, true)}
                 </Box>
             </Stack>
         </Box>
