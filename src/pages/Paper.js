@@ -12,7 +12,7 @@ export default function Paper() {
         <Box ml={2}>
             <Stack direction="column" spacing={5}>
                 <Heading size="sm">
-                    This page provides details and links to download the data (images and features) of the work entitled a.
+                    This page provides details and links to download the data (images and features) of the work entitled A Database for Automatic Identification of Herbarium Specimens in Piperaceae Family.
                 </Heading>
                 <Heading>Abstract</Heading>
                 <Text align="justify">
