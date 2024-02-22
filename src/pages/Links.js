@@ -17,8 +17,8 @@ import {
 } from '@chakra-ui/react';
 import '@fontsource/courier-prime';
 import {getStructureOfImagesZip, getStructureOfFeaturesZip} from "./StructureFile";
-import Papa from "papaparse";
-
+import * as d3 from 'd3';
+import dzinho from '../a.csv';
 
 const datasets = [
     {value: 'br', label: 'BR'},
@@ -56,21 +56,23 @@ const regions = [
     {value: 'southeast', label: 'Southeast'},
 ];
 
+
 export default function Links() {
     const [selectsEmpty, setSelectsEmpty] = useState('');
-    const handleClick = async () => {
+    const handleClick = () => {
         if (dataset === '' || type === '' || minimum === '' || color === '' || size === '') {// || region===''){
             setSelectsEmpty(true);
         } else {
             setSelectsEmpty(false);
         }
-        const csv = await fetch("/a.csv").then(res => res.text());
-        Papa.parse( csv, {
-            download: true,
-            complete: function(results, file) {
-                console.log("Parsing complete:", results, file);
+        d3.csv(dzinho).then((data) => {
+            // data.map((d) => {
+            //     console.log(d);
+            // });
+            for (let i=1; i<data.length;i++){
+                console.log(data[i]);
             }
-        });
+        })
     };
     const [dataset, setDataset] = useState('');
     const handleChangeDataset = (event) => {
