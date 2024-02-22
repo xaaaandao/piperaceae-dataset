@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import Links from './pages/Links';
 import Images from './pages/Images';
+import Paper from './pages/Paper';
 
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
                 </TabList>
                 <TabPanels>
                     <TabPanel>
-                        <Images/>
+                        <Paper/>
                     </TabPanel>
                     <TabPanel>
                         <Links/>

@@ -1,0 +1,5 @@
+
+@javascript:S125"Remove this commented out code.(êÈ› 8ô©¶óÜ1
+^javascript:S1481=";Remove the declaration of the unused 'setSamples' variable.(ñÛïù8õ©¶óÜ1
+[javascript:S1854="8Remove this useless assignment to variable "setSamples".(ñÛïù8õ©¶óÜ1
+ojavascript:S3403¶"KRemove this "===" check; it will always be false. Did you mean to use "=="?(¢¬°Ö8Ä³·óÜ1

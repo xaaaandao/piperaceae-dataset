@@ -13,12 +13,12 @@ import {
     Select,
     Stack,
     FormControl,
-    Button,
+    Button, Table, TableContainer, Thead, Tr, Th, Tbody, Td,
 } from '@chakra-ui/react';
 import '@fontsource/courier-prime';
 import {getStructureOfImagesZip, getStructureOfFeaturesZip} from "./StructureFile";
 import * as d3 from 'd3';
-import dzinho from '../a.csv';
+import csvSamples from '../data/info_samples.csv';
 
 const datasets = [
     {value: 'br', label: 'BR'},
@@ -58,6 +58,33 @@ const regions = [
 
 
 export default function Links() {
+    const [samples, setSamples] = useState([]);
+    const samplesTable = () => {
+        return (<TableContainer>
+            <Table variant='striped' colorScheme='teal'>
+                <Thead>
+                    <Tr>
+                        <Th>seq</Th>
+                        <Th>genus_trusted</Th>
+                        <Th>specific_epithet_trusted</Th>
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    {
+                        samples.slice(0, 10).map((s) => {
+                            return (
+                                <Tr key={s.seq}>
+                                    <Td>{s.seq}</Td>
+                                    <Td>{s.genus_trusted}</Td>
+                                    <Td>{s.specific_epithet_trusted}</Td>
+                                </Tr>
+                            );
+                        })
+                    }
+                </Tbody>
+            </Table>
+        </TableContainer>);
+    }
     const [selectsEmpty, setSelectsEmpty] = useState('');
     const handleClick = () => {
         if (dataset === '' || type === '' || minimum === '' || color === '' || size === '') {// || region===''){
@@ -65,13 +92,14 @@ export default function Links() {
         } else {
             setSelectsEmpty(false);
         }
-        d3.csv(dzinho).then((data) => {
-            // data.map((d) => {
-            //     console.log(d);
-            // });
-            for (let i=1; i<data.length;i++){
-                console.log(data[i]);
-            }
+        d3.csv(csvSamples).then((datas) => {
+            datas.map((d) => {
+                samples.push({
+                    seq: d.seq,
+                    genus_trusted: d.genus_trusted,
+                    specific_epithet_trusted: d.specific_epithet_trusted
+                });
+            })
         })
     };
     const [dataset, setDataset] = useState('');
@@ -152,11 +180,12 @@ export default function Links() {
                     {selects(handleChangeRegion, regions, "Choose the region", "Region", region)}
                 </Stack>
                 {selectsEmpty === false && showLink()}
-                {selectsEmpty && (showAlert())}
+                {selectsEmpty && showAlert()}
                 <Button onClick={handleClick}>Get the URL!</Button>
                 {getStructureOfImagesZip()}
                 {getStructureOfFeaturesZip()}
 
+                {selectsEmpty && samplesTable()}
             </Stack>
         </Box>
 

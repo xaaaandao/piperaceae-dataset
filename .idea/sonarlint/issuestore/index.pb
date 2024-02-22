@@ -16,14 +16,11 @@ S
 :
 
 src/App.js,1/e/1e43fa63aecd2127be034b3fb9d4caa172275714
-D
-src/pages/Samples.js,1/d/1db087418e83a693cf2859fcbda661e36b077461
 B
 src/pages/Links.js,0/7/07240ac7f5b275fe0d74fb3cb32efada3ff00248
-9
-	src/a.csv,c/8/c89a26c5f527f3b82cbf865f7e3f7885b9337a0b
 <
 public/a.csv,5/2/52567a221e8169c6c79082f6f34617aa82f5392c
-:
-
-data/a.csv,d/c/dc93a2170a89691f5dcced5319d97eb30367a34c
+I
+src/data/info_samples.csv,b/3/b39ce85aab70f0b642086b69e951be2e4ef1df90
+B
+src/pages/Paper.js,6/8/681fd5cc2d8b7a7e5b4eefee78c87ab47f9a2884
