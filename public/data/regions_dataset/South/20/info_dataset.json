@@ -1,10 +1,10 @@
 [
     {
-        "minimum_image":20,
+        "minimum_image":"20",
         "level_name":"specific_epithet_trusted",
         "region":"Sul",
-        "levels":33,
-        "total":2111,
-        "average":63.97
+        "levels":"33",
+        "total":"2111",
+        "average":"63.97"
     }
 ]

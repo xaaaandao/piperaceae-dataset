@@ -125,22 +125,15 @@ export default function Samples(dataset) {
                 <TableContainer>
                     <Table variant='striped' colorScheme='green'>
                         <Thead>
-                            <Th>Seq</Th>
-                            <Th>Genus</Th>
-                            <Th>Species</Th>
-                            <Th>County</Th>
-                            <Th>State</Th>
-                            <Th>URLs</Th>
+                            <Th>Specie</Th>
+                            <Th>Count</Th>
                         </Thead>
                         <Tbody>
                             {data.slice(0, 50).map((d) => {
-                                return (<Tr key={d.seq}>
-                                    <Td>{d.seq}</Td>
-                                    <Td>{d.genus_trusted}</Td>
-                                    <Td><Text as='i'>{d.specific_epithet_trusted}</Text></Td>
-                                    <Td>{d.county}</Td>
-                                    <Td>{d.state_province}</Td>
-                                    <Td>{d.urls.toString()}</Td>
+                                console.log(d);
+                                return (<Tr key={d.levels}>
+                                    <Td>{d.levels}</Td>
+                                    <Td>{d.count}</Td>
                                 </Tr>);
                             })}
                         </Tbody>
@@ -229,6 +222,7 @@ export default function Samples(dataset) {
                         </h2>
                         <AccordionPanel pb={4}>
                             <Text>All the species chosen are available in this file.</Text>
+                            {TableSpecies()}
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>

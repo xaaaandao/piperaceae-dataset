@@ -1,9 +1,9 @@
 [
     {
-        "minimum_image":5,
+        "minimum_image":"20",
         "level_name":"specific_epithet_trusted",
-        "levels":55,
-        "total":1356,
-        "average":24.65
+        "levels":"106",
+        "total":"9248",
+        "average":"87.25"
     }
 ]

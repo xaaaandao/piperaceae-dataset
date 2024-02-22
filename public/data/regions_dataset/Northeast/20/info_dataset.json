@@ -1,10 +1,10 @@
 [
     {
-        "minimum_image":20,
+        "minimum_image":"20",
         "level_name":"specific_epithet_trusted",
         "region":"Nordeste",
-        "levels":21,
-        "total":776,
-        "average":36.95
+        "levels":"21",
+        "total":"776",
+        "average":"36.95"
     }
 ]

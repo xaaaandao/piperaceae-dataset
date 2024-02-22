@@ -1,10 +1,10 @@
 [
     {
-        "minimum_image":10,
+        "minimum_image":"10",
         "level_name":"specific_epithet_trusted",
         "region":"Centro-Oeste",
-        "levels":29,
-        "total":1045,
-        "average":36.03
+        "levels":"29",
+        "total":"1045",
+        "average":"36.03"
     }
 ]
