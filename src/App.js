@@ -6,11 +6,16 @@ import {
     TabList,
     Tab,
     Tabs,
-    Heading, TabPanels, TabPanel,
+    Heading,
+    TabPanels,
+    TabPanel
 } from '@chakra-ui/react';
-import Datasets from './pages/Datasets';
 import Images from './pages/Images';
 import Paper from './pages/Paper';
+import Herbaria from './pages/Herbaria';
+import Species from './pages/Species';
+import Samples from './pages/Samples';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function App() {
@@ -22,18 +27,27 @@ export default function App() {
             <Tabs size="md" variant="enclosed">
                 <TabList>
                     <Tab>Paper</Tab>
-                    <Tab>Datasets</Tab>
+                    {/*<Tab>Datasets</Tab>*/}
                     <Tab>Images</Tab>
+                    <Tab>Herbaria</Tab>
+                    <Tab>Species</Tab>
+                    <Tab>Samples</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
                         <Paper/>
                     </TabPanel>
                     <TabPanel>
-                        <Datasets/>
+                        <Images/>
                     </TabPanel>
                     <TabPanel>
-                        <Images/>
+                        <Herbaria/>
+                    </TabPanel>
+                    <TabPanel>
+                        <Species/>
+                    </TabPanel>
+                    <TabPanel>
+                        <Samples dataset="br"/>
                     </TabPanel>
                 </TabPanels>
             </Tabs>

@@ -1,20 +1,23 @@
 import {ColorModeScript} from '@chakra-ui/react';
-import React, {StrictMode, useEffect} from 'react';
+import React, {StrictMode} from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-// import Samples from "./pages/Samples";
+import { ChakraProvider } from '@chakra-ui/provider';
+import {ToastContainer} from "react-toastify";
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-    <StrictMode>
-        <ColorModeScript/>
-        <App/>
-    </StrictMode>
+    <ChakraProvider>
+        <StrictMode>
+            <ColorModeScript/>
+            <App/>
+            <ToastContainer/>
+        </StrictMode>
+    </ChakraProvider>
 );
 
 // If you want your app to work offline and load faster, you can change

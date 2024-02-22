@@ -44,7 +44,7 @@ function tableUNet() {
         {hyperparameter: "Learning rate", value: 0.001}
     ];
     return (<TableContainer>
-        <Table size='sm'>
+        <Table variant='striped' colorScheme='teal'>
             <TableCaption><strong>Table 1</strong>: Main hyperparameters used in the U-Net</TableCaption>
             <Thead>
                 <Th>Hyperparameter</Th>
@@ -82,10 +82,10 @@ export default function Images() {
                 </Box>
                 <Box width="40%">
                     <Text align="center">
-                        <strong>Figure 2</strong>
+                        <strong>Figure 2</strong>: comparative between segmented by U-Net and a human.
                     </Text>
                     {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskUNet, ExsiccataUNet)}
-                    {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskManual, ExsiccataMaskManual, true)}
+                    {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskManual, ExsiccataManual, true)}
                 </Box>
             </Stack>
         </Box>
