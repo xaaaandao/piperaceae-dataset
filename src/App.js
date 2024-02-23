@@ -53,34 +53,6 @@ export default function App() {
                     </TabPanel>
                 </TabPanels>
             </Tabs>
-            {/*        /!*<Tab>Datasets</Tab>*!/*/}
-            {/*        <Tab>Images</Tab>*/}
-            {/*        <Tab>Herbaria</Tab>*/}
-            {/*        <Tab>Samples BR</Tab>*/}
-            {/*        <Tab>Samples PR</Tab>*/}
-            {/*        <Tab>Samples Region</Tab>*/}
-            {/*    </TabList>*/}
-                {/*<TabPanels>*/}
-                {/*    <TabPanel>*/}
-                {/*        <Paper/>*/}
-                {/*    </TabPanel>*/}
-                {/*    <TabPanel>*/}
-                {/*        <Images/>*/}
-                {/*    </TabPanel>*/}
-                {/*    <TabPanel>*/}
-                {/*        <Herbaria/>*/}
-                {/*    </TabPanel>*/}
-                {/*    <TabPanel>*/}
-                {/*        <Datasets dataset="BR"/>*/}
-                {/*    </TabPanel>*/}
-                {/*    <TabPanel>*/}
-                {/*        <Datasets dataset="PR"/>*/}
-                {/*    </TabPanel>*/}
-                {/*    <TabPanel>*/}
-                {/*        <Datasets dataset="Regions"/>*/}
-                {/*    </TabPanel>*/}
-                {/*</TabPanels>*/}
-            {/*</Tabs>*/}
         </ThemeProvider>
     );
 }
