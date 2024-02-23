@@ -44,7 +44,7 @@ class Paper extends React.Component {
         return (
             <>
                 <Heading>Abstract</Heading>
-                <Text>{this.state.abstract}</Text>
+                <Text align="justify">{this.state.abstract}</Text>
             </>
         );
     }

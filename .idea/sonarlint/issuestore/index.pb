@@ -31,10 +31,6 @@ M
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 F
 src/utils/datasetbr.js,3/4/34f350148ccdf03e9d5492046f056c14e5cf0204
-L
-src/pages/texts/TextPaper.js,9/9/9941dfedd6a7703ead8885579a20cbc66c31558e
-L
-src/pages/texts/TextImage.js,a/2/a2bef530febd2789308aac2c1a151acb797944eb
 ;
 src/App.css,a/a/aa7165aefcf8ee3d73539e99ab007daf1aa18d8d
 E
@@ -179,3 +175,7 @@ I
 src/App.test.js,9/2/923703ced91ac38943d37930d9d27a7ebe8f01ad
 A
 src/pages/UNet.js,5/d/5de4d0905673e221854a3f0b84fa1ddd55a217eb
+D
+src/pages/Dataset.js,3/a/3a33249f6db7f395b11397e18db009fea87bf9f2
+D
+src/pages/Samples.js,1/d/1db087418e83a693cf2859fcbda661e36b077461
