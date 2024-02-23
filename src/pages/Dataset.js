@@ -61,23 +61,35 @@ class Dataset extends React.Component {
     };
 
      handleClick(event) {
-        if (this.state.size === "" || this.state.type === "" || this.state.color === "" || this.state.minimum === ""){
+        if ((this.state.size === "" || this.state.type === "" || this.state.color === "" || this.state.minimum === "") && ((this.props.dataset==="Regions" && this.state.region===""))){
             toast.error("Selects are empty!");
         }
-        if (this.state.size !== "" && this.state.type !== "" && this.state.color !== "" && this.state.minimum !== ""){
+        if ((this.state.size !== "" && this.state.type !== "" && this.state.color !== "" && this.state.minimum !== "") || (this.props.dataset==="Regions" && this.state.region!=="")){
             this.dataLevels();
             this.dataSamples();
         }
     }
 
     dataSamples() {
-        const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.minimum}/info_samples.json`;
-        this.fetchData("samples", url);
+        if(this.props.dataset==="Regions"){
+            const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.region}/${this.state.minimum}/info_samples.json`;
+            this.fetchData("samples", url);
+        } else {
+            const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.minimum}/info_samples.json`;
+            console.log(url);
+            this.fetchData("samples", url);
+        }
     }
 
     dataLevels() {
-        const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.minimum}/info_levels.json`;
-        this.fetchData("species", url);
+         if(this.props.dataset==="Regions"){
+             const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.region}/${this.state.minimum}/info_levels.json`;
+             this.fetchData("species", url);
+         } else {
+             const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.minimum}/info_levels.json`;
+             this.fetchData("species", url);
+         }
+
     }
 
     layoutSelect(handle, label, name, options, placeholder) {
@@ -86,7 +98,7 @@ class Dataset extends React.Component {
                 <FormLabel>{label}</FormLabel>
                 <Select placeholder={placeholder} onChange={handle} name={name}>
                     {options.map((o) => {
-                        return <option key={o} value={o.toString().toLowerCase()}>{o}</option>;
+                        return <option key={o} value={o}>{o}</option>;
                     })}
                 </Select>
             </Stack>);
@@ -99,7 +111,7 @@ class Dataset extends React.Component {
                 {this.layoutSelect(this.handleSelectChange, "Color", "color", this.state.colors, "Choose the color")}
                 {this.layoutSelect(this.handleSelectChange, "Minimum", "minimum", this.state.minimums, "Choose the minimums")}
                 {this.layoutSelect(this.handleSelectChange, "Image size", "size", this.state.sizes, "Choose the sizes")}
-                {/*{this.props.dataset==="Regions" && this.layoutSelect(this.handleSelectChange, "Regions", "region", this.state.regions, "Choose the regions")}*/}
+                {this.props.dataset==="Regions" && this.layoutSelect(this.handleSelectChange, "Regions", "region", this.state.regions, "Choose the regions")}
             </Stack>
         );
     }
