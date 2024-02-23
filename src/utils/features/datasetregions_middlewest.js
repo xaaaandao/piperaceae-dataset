@@ -1,11 +1,11 @@
 function getFeaturesRgb256(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/drive/folders/15Fcft-nHcmwvx3PAUi-surnFTatt-wkG?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1NwBxVL2lAB0DUsvdEfShnlNLLFxmX6-v?usp=sharing';
         case '10':
-            return 'https://drive.google.com/drive/folders/1le--MVi0N2Mg-G3AWM5VJVL5iwXciaQR?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1Q7VVBw2Qya2c3BfxFnwa2kc-tpNvbmVf?usp=sharing';
         case '20':
-            return  'https://drive.google.com/drive/folders/1cerXwAN_GLPvsMZVphbY3qenvTKnX5-g?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1SfWR_5FyhNQpjWkwBK5-Kv6_2u1_OEaY?usp=sharing';
         default:
             console.error('minimum is invalid.');
     }
@@ -14,11 +14,11 @@ function getFeaturesRgb256(minimum) {
 function getFeaturesRgb400(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/drive/folders/1AVQhqlyN2eAP7rKL_V0e8WByU4GsHsiA?usp=sharing';
+            return 'https://drive.google.com/drive/folders/12oxe0J7xeEsnLFgrdAw62siScIpvSTEG?usp=sharing';
         case '10':
-            return 'https://drive.google.com/drive/folders/1GubnPD6DDdoQGSh-b1Iq_gq1AWKtDxvc?usp=sharing';
+            return 'https://drive.google.com/drive/folders/19P_oQPvUORLzcuNLBZ17J34FIU7OjEYz?usp=sharing';
         case '20':
-            return 'https://drive.google.com/drive/folders/1WzpdfM_ol7vX3UW0DnO-YxMO0CZcR_j7?usp=sharing';
+            return 'https://drive.google.com/drive/folders/10ws-_WvcuIUxahNCiToruYe4SFrFvYYd?usp=sharing';
         default:
             console.error('minimum is invalid.');
     }
@@ -27,11 +27,11 @@ function getFeaturesRgb400(minimum) {
 function getFeaturesRgb512(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/drive/folders/16nlcJ14TMPSnFVr5W3Q388emjhRLXoz8?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1w-d_dwY_0-tDLlPXd6QcSiGr-DWbLnQd?usp=sharing';
         case '10':
-            return 'https://drive.google.com/drive/folders/1dujjf1CEkrpJcY1i4nvkUfHyJHvIXPD7?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1m-G-A-ub_-qC_NRsfKpoyvxmDZjZEErZ?usp=sharing';
         case '20':
-            return 'https://drive.google.com/drive/folders/1-ZsEbL8NSnw0o_yv67apL2144_9L58oR?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1fgCrUt7Jg-VitwAbekX_fVOwm9mQrKCh?usp=sharing';
         default:
             console.error('minimum is invalid.');
     }
@@ -53,11 +53,11 @@ function getFeaturesRgb(minimum, size) {
 function getFeaturesGrayscale256(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/drive/folders/1s2BHKO3yXttJDxPexVf70NK0QX5XYt5o?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1J_QdUpkjRb8-GmCxPvDM2QWANl3O3Zrw?usp=sharing';
         case '10':
-            return 'https://drive.google.com/drive/folders/1W4aFBjN6NlvV_jsGrukjDqwqxdum3vtT?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1leeL4mSeLq82N5afSOvCk5aMj_ediJ0D?usp=sharing';
         case '20':
-            return 'https://drive.google.com/drive/folders/15FiAuYxKeGwN9jmI631kN7tCD9S9uqrr?usp=sharing';
+            return 'https://drive.google.com/drive/folders/10Q-l6rMsp8o4b68v09gEz1srQ256cbyl?usp=sharing';
         default:
             console.error('minimum is invalid.');
     }
@@ -66,11 +66,11 @@ function getFeaturesGrayscale256(minimum) {
 function getFeaturesGrayscale400(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/drive/folders/1gOCOVS2Jp6Yc6lXPiOcBeHKGm4xKRuja?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1bilH0F6JaUcovx_T0ZTUiPJW-8dtdE2q?usp=sharing';
         case '10':
-            return 'https://drive.google.com/drive/folders/1QX9lalUF9JVKk0uX-Mb7QJEX2NUWZawE?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1UywOsvuoXsw6XGEJcOnqtrt8MUMTp6F3?usp=sharing';
         case '20':
-            return 'https://drive.google.com/drive/folders/1hlljZoNWC8gN_EITLSGDqfOMK54qkg4B?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1a19OGW6ZMRvBqps-1zXthnJmhkcQW_8U?usp=sharing';
         default:
             console.error('minimum is invalid.');
     }
@@ -79,11 +79,11 @@ function getFeaturesGrayscale400(minimum) {
 function getFeaturesGrayscale512(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/drive/folders/13aBsCzrwiMcJo9evxLnvPDRqyqxTLAOA?usp=sharing';
+            return 'https://drive.google.com/drive/folders/17muX3Z0owmlv-zdz4cqw9u3YcSp8xRiu?usp=sharing';
         case '10':
-            return 'https://drive.google.com/drive/folders/1EtwG0eHK941LWKEUEa9ZX09FzOYVHNXn?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1GQM42Cj0FQWP40IjePE4hJmP-t29BBX7?usp=sharing';
         case '20':
-            return 'https://drive.google.com/drive/folders/1caQkmJO1RoySCxIDpsTG8m1g61VD640I?usp=sharing';
+            return 'https://drive.google.com/drive/folders/1IIbJRL_vaDX3GQm3NdGlK1wH-ItXQ-Yj?usp=sharing';
         default:
             console.error('minimum is invalid.');
     }

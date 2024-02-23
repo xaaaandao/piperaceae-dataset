@@ -2,6 +2,7 @@ import {
     Accordion,
     AccordionButton,
     AccordionIcon,
+    AlertIcon,
     AccordionItem,
     AccordionPanel,
     Alert,
@@ -27,6 +28,8 @@ import React from "react";
 import { toast } from "react-toastify";
 import * as PropTypes from "prop-types";
 import {getDataset as getDatasetBR} from "../utils/datasetbr";
+import {getDataset as getDatasetPR} from "../utils/datasetpr";
+import {getDataset as getDatasetRegions} from "../utils/datasetregions";
 
 
 Link.propTypes = {
@@ -192,8 +195,12 @@ class Dataset extends React.Component {
         switch(this.props.dataset){
             case "BR":
                 return getDatasetBR(this.state.color, this.state.minimum, this.state.size, this.state.type);
-            // case "PR":
-            //     return getDatasetPR(this.state.color, this.state.minimum, this.state.size, this.state.type);
+            case "PR":
+                return getDatasetPR(this.state.color, this.state.minimum, this.state.size, this.state.type);
+            case "Regions":
+                return getDatasetRegions(this.state.color, this.state.minimum, this.state.region, this.state.size, this.state.type);
+            default:
+                console.error("dataset is invalid");
         }
     }
 
@@ -202,7 +209,7 @@ class Dataset extends React.Component {
             <Alert status="info" justifyContent="center">
                 <AlertIcon/>
                 <AlertTitle>I found the link!</AlertTitle>
-                <AlertDescription><Link href={this.getLink()} style={{color: "blue"}}>Link</Link> to download.</AlertDescription>
+                <AlertDescription><Link href={this.getLink()} style={{color: "blue"}}  isExternal>Link</Link> to download.</AlertDescription>
             </Alert>);
     }
 

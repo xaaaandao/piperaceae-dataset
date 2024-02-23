@@ -1,11 +1,11 @@
 function getImagesRgb256(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/file/d/1FHPJsLptLEV3P6Xtu_KkJkcAhRymNWCR/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1MJRzI27t0yC9N2Um5cjI0FB0Iol9M8-I/view?usp=sharing';
         case '10':
-            return 'https://drive.google.com/file/d/1yi4fs0j-MX1iUm5EIuubETvLBhkruDbg/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1_XF9e2k_uEmBJ94UqZakdQdQAC1Hm1k0/view?usp=sharing';
         case '20':
-            return 'https://drive.google.com/file/d/1EdKxwdlmg9JqRaHVWrXIqkmGSLW_fh4k/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1PTkuG5bFhKY_0WmPkVnKSodWD3QqRvMp/view?usp=sharing';
         default:
             console.log("option invalid");
     }
@@ -14,11 +14,11 @@ function getImagesRgb256(minimum) {
 function getImagesRgb400(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/file/d/14WHtoXAASQ1X_eT2y6W4S2imV1iVA6aO/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1Xxg_oj4hEhhcThmEAG_vph4uw6ySLp3w/view?usp=sharing';
         case '10':
-            return 'https://drive.google.com/file/d/1Lo95UE4XwB43vye_CTOezv7jVjcNzFRw/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1y1xPgKIafEB6UZzrWe8T0ny-u9akjSdK/view?usp=sharing';
         case '20':
-            return 'https://drive.google.com/file/d/1dwhQO2sta07t5fi13IexLZzz85HnRIxU/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1pweqdd7LjG1U5vLATpJINZESBrDsY5eM/view?usp=sharing';
         default:
             console.log("option invalid");
     }
@@ -28,11 +28,11 @@ function getImagesRgb400(minimum) {
 function getImagesRgb512(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/file/d/1nj_0ed6KRxqH18Nx18-jWLeoUstVHAUg/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1fYP7hkCbrmlarsuROMMh5ZXx2m2xuCYF/view?usp=sharing';
         case '10':
-            return 'https://drive.google.com/file/d/1N_sUwHrDPq9lrTjx_oj2hyGvP2ULZ_zY/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1nVO4IZh3lNE1BRMYjfAxl705wW7CgHsR/view?usp=sharing';
         case '20':
-            return 'https://drive.google.com/file/d/1nl44nQb-SRtNeJrTvRy8S4aOw24TfACK/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1lDS_yTOgpG44zNn4c8lhH3v3p0LMWrBH/view?usp=sharing';
         default:
             console.log("option invalid");
     }
@@ -54,11 +54,11 @@ function getImagesRgb(minimum, size) {
 function getImagesGrayscale256(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/file/d/1fp9bRSJwc0PzqYw45A60BEf5NckSAsuE/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/18zcNJHhE__x3hhO-dcrVItqEvIJK62Ya/view?usp=sharing';
         case '10':
-            return 'https://drive.google.com/file/d/1IX0MeeLW4MOb9Ta0KfIgwDCZQT8dpqlj/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1DbZzRwrfxeTDBDpUg-aOkjZP9M9Qd5jy/view?usp=sharing';
         case '20':
-            return 'https://drive.google.com/file/d/1gfvTm-oO58tfLHpXU7bBcjSkptE4V5v0/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1AsvBcfurddiUt8mryCuJtasr3tCl3CU2/view?usp=sharing';
         default:
             console.log("option invalid");
     }
@@ -67,11 +67,11 @@ function getImagesGrayscale256(minimum) {
 function getImagesGrayscale400(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/file/d/15SX3z988NP1Cj5CUIdeIeMw8cPQ4Z4FG/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/13QrY6N6RPheeJoi49Bme4-n3rgiyy8WC/view?usp=sharing';
         case '10':
-            return 'https://drive.google.com/file/d/17RVsUBJeT6qYjm8J9piEfmPXVlvOv0Sz/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1N8BBHOT5UvxLu61ArrSf3f_TLUsAMCGe/view?usp=sharing';
         case '20':
-            return 'https://drive.google.com/file/d/13sF7sSe-qAcBgYr0_foczYQnHhzkIqjq/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1EezGlu5O4RKcc6MGPBx5J4H7BCzWKvHP/view?usp=sharing';
         default:
             console.log("option invalid");
     }
@@ -80,11 +80,11 @@ function getImagesGrayscale400(minimum) {
 function getImagesGrayscale512(minimum) {
     switch (minimum) {
         case '5':
-            return 'https://drive.google.com/file/d/1AzEBZrgSVSp1igR3kTdpOb9b0c0dhezj/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1WeRiU8bZq3gvDY0d5Wnl-z3EN9oQzJFZ/view?usp=sharing';
         case '10':
-            return 'https://drive.google.com/file/d/10ltWU4r8QtZz9Sl2r29thA0mIyL1WD8S/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/1MUth8Hf8wBp773b0xkVJPeG8iT53rT_f/view?usp=sharing';
         case '20':
-            return 'https://drive.google.com/file/d/1EpF7AlN7uHVREnYnO52052oBafl_95e1/view?usp=drive_link';
+            return 'https://drive.google.com/file/d/144kypwtAJQCx7rsjhrVxgMsq60vJM6fr/view?usp=sharing';
         default:
             console.log("option invalid");
     }

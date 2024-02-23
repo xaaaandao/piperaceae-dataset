@@ -104,7 +104,7 @@ function getImagesGrayscale(minimum, size) {
 
 export default function getImages(color, minimum, size) {
     switch (color) {
-        case 'rgb':
+        case 'RGB':
             return getImagesRgb(minimum, size);
         case 'grayscale':
             return getImagesGrayscale(minimum, size);
