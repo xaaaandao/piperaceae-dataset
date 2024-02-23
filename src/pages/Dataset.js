@@ -1,14 +1,17 @@
 import {
-    Accordion, AccordionButton, AccordionIcon,
-    AccordionItem, AccordionPanel,
+    Accordion,
+    AccordionButton,
+    AccordionIcon,
+    AccordionItem,
+    AccordionPanel,
     Alert,
     AlertDescription,
-    AlertIcon,
     AlertTitle,
     Box,
     Button,
     FormControl,
     FormLabel,
+    Link,
     Select,
     Stack,
     Table,
@@ -22,6 +25,15 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { toast } from "react-toastify";
+import * as PropTypes from "prop-types";
+import {getDataset as getDatasetBR} from "../utils/datasetbr";
+
+
+Link.propTypes = {
+    style: PropTypes.shape({color: PropTypes.string}),
+    href: PropTypes.any,
+    children: PropTypes.node
+};
 
 class Dataset extends React.Component {
     constructor(props) {
@@ -43,6 +55,7 @@ class Dataset extends React.Component {
             species: [],
             thsSamples: ["Seq", "Genus", "Species", "URLs"],
             thsSpecies: ["Species", "Count"],
+            showLink: false
         }
     }
 
@@ -63,10 +76,12 @@ class Dataset extends React.Component {
      handleClick(event) {
         if ((this.state.size === "" || this.state.type === "" || this.state.color === "" || this.state.minimum === "") && ((this.props.dataset==="Regions" && this.state.region===""))){
             toast.error("Selects are empty!");
+            this.setState({showLink: false});
         }
         if ((this.state.size !== "" && this.state.type !== "" && this.state.color !== "" && this.state.minimum !== "") || (this.props.dataset==="Regions" && this.state.region!=="")){
             this.dataLevels();
             this.dataSamples();
+            this.setState({showLink: true});
         }
     }
 
@@ -76,7 +91,6 @@ class Dataset extends React.Component {
             this.fetchData("samples", url);
         } else {
             const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.minimum}/info_samples.json`;
-            console.log(url);
             this.fetchData("samples", url);
         }
     }
@@ -89,7 +103,6 @@ class Dataset extends React.Component {
              const url = `http://localhost:3000/piperaceae-dataset/data/${this.props.dataset.toString().toLowerCase()}_dataset/${this.state.minimum}/info_levels.json`;
              this.fetchData("species", url);
          }
-
     }
 
     layoutSelect(handle, label, name, options, placeholder) {
@@ -173,12 +186,23 @@ class Dataset extends React.Component {
         </TableContainer>;
     }
 
+
+
+    getLink() {
+        switch(this.props.dataset){
+            case "BR":
+                return getDatasetBR(this.state.color, this.state.minimum, this.state.size, this.state.type);
+            // case "PR":
+            //     return getDatasetPR(this.state.color, this.state.minimum, this.state.size, this.state.type);
+        }
+    }
+
     showLink() {
         return (
             <Alert status="info" justifyContent="center">
                 <AlertIcon/>
                 <AlertTitle>I found the link!</AlertTitle>
-                <AlertDescription>Link to download.</AlertDescription>
+                <AlertDescription><Link href={this.getLink()} style={{color: "blue"}}>Link</Link> to download.</AlertDescription>
             </Alert>);
     }
 
@@ -188,6 +212,7 @@ class Dataset extends React.Component {
                 <Text>{this.state.introduction} {this.props.dataset}.</Text>
                 <Stack my={5}>
                     {this.setSelects()}
+                    {this.state.showLink && this.showLink()}
                     <Button onClick={this.handleClick}>Get the link!</Button>
                     <Accordion allowToggle>
                         {this.accordionTable("See any samples used.","", )}
