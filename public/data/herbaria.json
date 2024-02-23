@@ -1,0 +1,192 @@
+[
+    {
+        "acronym":"ALCB",
+        "samples":176,
+        "name":"Herb\u00e1rio Alexandre Leal Costa - UFBA"
+    },
+    {
+        "acronym":"ASE",
+        "samples":2,
+        "name":"Herb\u00e1rio da Universidade Federal de Sergipe - UFSE"
+    },
+    {
+        "acronym":"CBPM",
+        "samples":17,
+        "name":"Cole\u00e7\u00e3o Bot\u00e2nica de Plantas Medicinais - FIOCRUZ"
+    },
+    {
+        "acronym":"CEN",
+        "samples":907,
+        "name":"Herb\u00e1rio da Embrapa Recursos Gen\u00e9ticos e Biotecnologia"
+    },
+    {
+        "acronym":"CESJ",
+        "samples":5,
+        "name":"Herb\u00e1rio Leopoldo Krieger - UFJF"
+    },
+    {
+        "acronym":"CRI",
+        "samples":36,
+        "name":"Herb\u00e1rio Pe. Dr. Raulino Reitz - UNESC"
+    },
+    {
+        "acronym":"CVRD",
+        "samples":28,
+        "name":"Herb\u00e1rio da Reserva Natural Vale "
+    },
+    {
+        "acronym":"ESA",
+        "samples":110,
+        "name":"Escola Superior de Agricultura Luiz de Queiroz - ESALQ - USP"
+    },
+    {
+        "acronym":"EVB",
+        "samples":7,
+        "name":"Evaldo Buttura - UNILA"
+    },
+    {
+        "acronym":"FLOR",
+        "samples":45,
+        "name":"Herb\u00e1rio, Fung\u00e1rio e Alg\u00e1rio do Departamento de Bot\u00e2nica da UFSC"
+    },
+    {
+        "acronym":"FURB",
+        "samples":591,
+        "name":"Herb\u00e1rio Dr. Roberto Miguel Klein - URB"
+    },
+    {
+        "acronym":"HBRA",
+        "samples":2,
+        "name":"Herb\u00e1rio do Instituto de Estudos Costeiros - UFPA - Campus Bragan\u00e7a"
+    },
+    {
+        "acronym":"HDJF",
+        "samples":2,
+        "name":"Herb\u00e1rio Dendrol\u00f3gico Jeanine Felfili - UFVJM"
+    },
+    {
+        "acronym":"HSTM",
+        "samples":25,
+        "name":"Herb\u00e1rio da Universidade Federal do Oeste do Par\u00e1 - UFOPA"
+    },
+    {
+        "acronym":"HUCP",
+        "samples":1,
+        "name":"Herb\u00e1rio da Pontif\u00edcia Universidade Cat\u00f3lica do Paran\u00e1 - PUC-PR"
+    },
+    {
+        "acronym":"HUEFS",
+        "samples":235,
+        "name":"Herb\u00e1rio da Universidade Estadual de Feira de Santana - UEFS"
+    },
+    {
+        "acronym":"HUEM",
+        "samples":188,
+        "name":"Herb\u00e1rio da Universidade Estadual de Maring\u00e1 - UEM"
+    },
+    {
+        "acronym":"HUESB",
+        "samples":10,
+        "name":"Herb\u00e1rio da Universidade Estadual do Sudoeste da Bahia - UESB Campus Jequi\u00e9"
+    },
+    {
+        "acronym":"HUFU",
+        "samples":165,
+        "name":"Universidade Federal de Uberl\u00e2ndia"
+    },
+    {
+        "acronym":"IAN",
+        "samples":54,
+        "name":"Herb\u00e1rio IAN - Embrapa Amaz\u00f4nia Oriental"
+    },
+    {
+        "acronym":"INPA",
+        "samples":1326,
+        "name":"Heb\u00e1rio do INPA \u2013 Instituto Nacional de Pesquisas da Amaz\u00f4nia"
+    },
+    {
+        "acronym":"IPA",
+        "samples":2,
+        "name":"Herb\u00e1rio IPA \u2013 D\u00e1rdano de Andrade Lima"
+    },
+    {
+        "acronym":"LUSC",
+        "samples":3,
+        "name":"Herb\u00e1rio Lages da Universidade do Estado de Santa Catarina - UESC"
+    },
+    {
+        "acronym":"MBM",
+        "samples":1231,
+        "name":"Museu Bot\u00e2nico Municipal - Prefeitura de Curitiba"
+    },
+    {
+        "acronym":"MBML",
+        "samples":5,
+        "name":"Herb\u00e1rio do Museu de Biologia Mello Leit\u00e3o"
+    },
+    {
+        "acronym":"NL",
+        "samples":144,
+        "name":"NL-Botany - Naturalis Biodiversity Center (NBC)"
+    },
+    {
+        "acronym":"NY",
+        "samples":3761,
+        "name":"The New York Botanical Garden"
+    },
+    {
+        "acronym":"R",
+        "samples":69,
+        "name":"Herb\u00e1rio do Museu Nacional do Rio de Janeiro - UFRJ"
+    },
+    {
+        "acronym":"RBR",
+        "samples":3,
+        "name":"Herb\u00e1rio do Departamento de Bot\u00e2nica da UFRRJ"
+    },
+    {
+        "acronym":"SAMES",
+        "samples":3,
+        "name":"S\u00e3o Mateus - Espirito Santo - UFES"
+    },
+    {
+        "acronym":"SP",
+        "samples":206,
+        "name":"Herb\u00e1rio Maria Eneyda P. K. Fidalgo - Instituto de Bot\u00e2nica (SP)"
+    },
+    {
+        "acronym":"SPF",
+        "samples":843,
+        "name":"Universidade de S\u00e3o Paulo"
+    },
+    {
+        "acronym":"UEC",
+        "samples":202,
+        "name":"Herb\u00e1rio da Universidade Estadual de Campinas"
+    },
+    {
+        "acronym":"UFG",
+        "samples":2,
+        "name":"Herb\u00e1rio da Universidade Federal de Goi\u00e1s"
+    },
+    {
+        "acronym":"UPCB",
+        "samples":8,
+        "name":"Herb\u00e1rio William Antonio Rodrigues - UFPR"
+    },
+    {
+        "acronym":"V",
+        "samples":5,
+        "name":"F-Seedplants - Field Museum of Natural History (Botany) Seed Plant Collection"
+    },
+    {
+        "acronym":"VIC",
+        "samples":24,
+        "name":"Herb\u00e1rio da Universidade Federal de Vi\u00e7osa - UFV"
+    },
+    {
+        "acronym":"VIES",
+        "samples":71,
+        "name":"Universidade Federal do Esp\u00edrito Santo"
+    }
+]

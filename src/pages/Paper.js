@@ -1,4 +1,4 @@
-import {Box, Heading, Link, ListItem, Stack, Text, UnorderedList} from "@chakra-ui/react";
+import {Box, Heading, Link, ListItem, OrderedList, Stack, Text, UnorderedList} from "@chakra-ui/react";
 import {abstract, introductionTextPage} from "./texts/TextPaper";
 
 
@@ -20,9 +20,18 @@ export default function Paper() {
     return (
         <Box ml={2}>
             <Stack direction="column" spacing={5}>
-                <Heading size="sm">
-                    {introductionTextPage}
-                </Heading>
+                {introductionTextPage}
+                <Text>
+                    Six tabs are composed on this page.
+                    <OrderedList>
+                        <ListItem>[Paper] About paper and authors. </ListItem>
+                        <ListItem>[Image] About images and the process to segment the exsiccata.</ListItem>
+                        <ListItem>[Herbaria] About the herbaria of the samples.</ListItem>
+                        <ListItem>[Samples BR] Download samples (images or features) used in experiments with subsets BR.</ListItem>
+                        <ListItem>[Samples PR] Download samples (images or features) used in experiments with subsets PR.</ListItem>
+                        <ListItem>[Samples Regions] Download samples (images or features) used in experiments with subsets Regions.</ListItem>
+                    </OrderedList>
+                </Text>
                 <Heading>Abstract</Heading>
                 {abstract}
                 <Heading>Authors</Heading>

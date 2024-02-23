@@ -13,8 +13,7 @@ import {
 import Images from './pages/Images';
 import Paper from './pages/Paper';
 import Herbaria from './pages/Herbaria';
-import Species from './pages/Species';
-import Samples from './pages/Samples';
+import Datasets from './pages/Datasets';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -30,8 +29,9 @@ export default function App() {
                     {/*<Tab>Datasets</Tab>*/}
                     <Tab>Images</Tab>
                     <Tab>Herbaria</Tab>
-                    <Tab>Species</Tab>
-                    <Tab>Samples</Tab>
+                    <Tab>Samples BR</Tab>
+                    <Tab>Samples PR</Tab>
+                    <Tab>Samples Region</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
@@ -44,10 +44,13 @@ export default function App() {
                         <Herbaria/>
                     </TabPanel>
                     <TabPanel>
-                        <Species/>
+                        <Datasets dataset="BR"/>
                     </TabPanel>
                     <TabPanel>
-                        <Samples dataset="br"/>
+                        <Datasets dataset="PR"/>
+                    </TabPanel>
+                    <TabPanel>
+                        <Datasets dataset="Regions"/>
                     </TabPanel>
                 </TabPanels>
             </Tabs>

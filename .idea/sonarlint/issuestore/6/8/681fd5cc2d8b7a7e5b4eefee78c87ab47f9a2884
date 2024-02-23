@@ -1,6 +1,5 @@
 
-Gjavascript:S1128"$Remove this unused import of 'Text'.(€Ş§Í8ºß”İ1
-`javascript:S1481"8Remove the declaration of the unused 'authors' variable.(ÁÏ×Õûÿÿÿÿ8Œ¢¥İ1
-]javascript:S1854"5Remove this useless assignment to variable "authors".(ÁÏ×Õûÿÿÿÿ8Œ¢¥İ1
-Ajavascript:S125"Remove this commented out code.(ş‡µ³8Œ¢¥İ1
-Ajavascript:S125 "Remove this commented out code.(‹¯™Ö8Œ¢¥İ1
+`javascript:S1481"8Remove the declaration of the unused 'authors' variable.(ÁÏ×Õûÿÿÿÿ8çòÑšİ1
+]javascript:S1854"5Remove this useless assignment to variable "authors".(ÁÏ×Õûÿÿÿÿ8çòÑšİ1
+Ajavascript:S125'"Remove this commented out code.(ş‡µ³8çòÑšİ1
+Ajavascript:S125)"Remove this commented out code.(‹¯™Ö8çòÑšİ1
