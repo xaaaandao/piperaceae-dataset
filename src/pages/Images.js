@@ -1,93 +1,58 @@
 import {
     Image,
     Box,
-    Heading,
     Stack,
-    VStack,
-    TableCaption,
-    Text, TableContainer, Table, Thead, Th, Tbody, Tr, Td, Link, Divider,
+    Text,
+    Divider
 } from '@chakra-ui/react';
 import ExampleExsiccata from '../figures/HUEFS0214753.jpg';
-import ExsiccataResized from '../figures/HUEFS0214753.jpeg';
-import ExsiccataMaskManual from '../figures/HUEFS0214753_mask_manual.jpg';
-import ExsiccataMaskUNet from '../figures/HUEFS0214753_mask_unet.jpg';
-import ExsiccataManual from '../figures/HUEFS0214753_manual.jpeg';
-import ExsiccataUNet from '../figures/HUEFS0214753_unet.jpeg';
+
 import '@fontsource/courier-prime';
-import {captionFigure, introductionTextPage, unetText} from "./texts/TextImage";
+import React from "react";
+import UNet from "./UNet";
 
-function layoutExampleExsiccata(exsiccataResized, exsiccataMask, exsiccataUNet, isManual = false) {
-    return (
-        <Stack direction="row" spacing={4}>
-            <VStack>
-                <Text fontSize="2xl"> Image resized </Text>
-                <Image src={exsiccataResized}/>
-            </VStack>
-            <VStack>
-                <Text fontSize="2xl"> Mask {isManual ? "manual" : "U-Net"} </Text>
-                <Image src={exsiccataMask}/>
-            </VStack>
-            <VStack>
-                <Box width="110%">
-                    <Text fontSize="2xl"> Exsiccata segmented </Text>
-                </Box>
-                <Image src={exsiccataUNet}/>
-            </VStack>
-        </Stack>
-    );
+
+class Images extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            introduction: "All the images used in the experiments are available in speciesLink. It's collected in Brazil and selected with the help of a specialist. Figure 1 is an example of the exsiccata.",
+            caption: "Example of Piper umbellata from Herbário da Universidade Estadual de Feira de Santana (HUEFS).",
+        };
+    }
+
+    setIntroduction() {
+        return (
+            <Text>
+                {this.state.introduction}
+            </Text>
+        );
+    }
+
+    exsiccataExample() {
+        return (
+            <Box width="50%" align="center" justifyContent="center">
+                <Text>
+                    {this.state.caption}
+                </Text>
+                <Image width="60%" height="60%" src={ExampleExsiccata}/>
+            </Box>
+        );
+    }
+
+
+    render() {
+        return (
+            <Box ml={2}>
+                <Stack direction="column" spacing={5}>
+                    {this.setIntroduction()}
+                    {this.exsiccataExample()}
+                    <Divider orientation='horizontal'/>
+                    <UNet/>
+                </Stack>
+            </Box>
+        );
+    }
 }
 
-function tableUNet() {
-    const hyperparameters = [
-        {hyperparameter: "Batch", value: 4},
-        {hyperparameter: "Epoch", value: 75},
-        {hyperparameter: "Learning rate", value: 0.001}
-    ];
-    return (<TableContainer>
-        <Table variant='striped' colorScheme='teal'>
-            <TableCaption><strong>Table 1</strong>: Main hyperparameters used in the U-Net</TableCaption>
-            <Thead>
-                <Th>Hyperparameter</Th>
-                <Th>Value</Th>
-            </Thead>
-            <Tbody>
-                {
-                    hyperparameters.map((v) => {
-                        return (
-                            <Tr key={v.hyperparameter}>
-                                <Td>{v.hyperparameter}</Td>
-                                <Td>{v.value}</Td>
-                            </Tr>
-                        );
-                    })}
-            </Tbody>
-        </Table>
-    </TableContainer>);
-}
-
-export default function Images() {
-    return (
-        <Box ml={2}>
-            <Stack direction="column" spacing={5}>
-                {introductionTextPage}
-                <Box width="50%" align="center" justifyContent="center">
-                    {captionFigure}
-                    <Image width="60%" height="60%" src={ExampleExsiccata}/>
-                </Box>
-                <Divider orientation='horizontal'/>
-                <Heading size="lg" mb={5}>Images segmented</Heading>
-                {unetText}
-                <Box width="40%" alignItems="center">
-                    {tableUNet()}
-                </Box>
-                <Box width="40%">
-                    <Text align="center">
-                        <strong>Figure 2</strong>: comparative between segmented by U-Net and a human.
-                    </Text>
-                    {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskUNet, ExsiccataUNet)}
-                    {layoutExampleExsiccata(ExsiccataResized, ExsiccataMaskManual, ExsiccataManual, true)}
-                </Box>
-            </Stack>
-        </Box>
-    );
-}
+export default Images;

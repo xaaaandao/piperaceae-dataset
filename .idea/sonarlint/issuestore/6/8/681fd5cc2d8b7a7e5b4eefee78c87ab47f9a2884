@@ -1,5 +1,5 @@
 
-`javascript:S1481"8Remove the declaration of the unused 'authors' variable.(ÁÏ×Õûÿÿÿÿ8çòÑšİ1
-]javascript:S1854"5Remove this useless assignment to variable "authors".(ÁÏ×Õûÿÿÿÿ8çòÑšİ1
-Ajavascript:S125'"Remove this commented out code.(ş‡µ³8çòÑšİ1
-Ajavascript:S125)"Remove this commented out code.(‹¯™Ö8çòÑšİ1
+Gjavascript:S1128"$Remove this unused import of 'Link'.( õ”­8ªßŞ°İ1
+Pjavascript:S1128"-Remove this unused import of 'UnorderedList'.( õ”­8«ßŞ°İ1
+javascript:S64414"eRemove this property or method or refactor "Paper", as "setAuthors" is not used inside component body(«×ó§øÿÿÿÿ8«ßŞ°İ1
+Ajavascript:S125O"Remove this commented out code.(Ü¿ªİ8«ßŞ°İ1

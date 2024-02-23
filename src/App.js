@@ -18,7 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function App() {
-    document.title="piperaceae-dataset"
+    document.title="piperaceae-dataset";
     return (
         <ThemeProvider theme={theme}>
             <CSSReset/>
@@ -26,12 +26,8 @@ export default function App() {
             <Tabs size="md" variant="enclosed">
                 <TabList>
                     <Tab>Paper</Tab>
-                    {/*<Tab>Datasets</Tab>*/}
                     <Tab>Images</Tab>
                     <Tab>Herbaria</Tab>
-                    <Tab>Samples BR</Tab>
-                    <Tab>Samples PR</Tab>
-                    <Tab>Samples Region</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
@@ -41,19 +37,38 @@ export default function App() {
                         <Images/>
                     </TabPanel>
                     <TabPanel>
-                        <Herbaria/>
-                    </TabPanel>
-                    <TabPanel>
-                        <Datasets dataset="BR"/>
-                    </TabPanel>
-                    <TabPanel>
-                        <Datasets dataset="PR"/>
-                    </TabPanel>
-                    <TabPanel>
-                        <Datasets dataset="Regions"/>
+                        <Paper/>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+            {/*        /!*<Tab>Datasets</Tab>*!/*/}
+            {/*        <Tab>Images</Tab>*/}
+            {/*        <Tab>Herbaria</Tab>*/}
+            {/*        <Tab>Samples BR</Tab>*/}
+            {/*        <Tab>Samples PR</Tab>*/}
+            {/*        <Tab>Samples Region</Tab>*/}
+            {/*    </TabList>*/}
+                {/*<TabPanels>*/}
+                {/*    <TabPanel>*/}
+                {/*        <Paper/>*/}
+                {/*    </TabPanel>*/}
+                {/*    <TabPanel>*/}
+                {/*        <Images/>*/}
+                {/*    </TabPanel>*/}
+                {/*    <TabPanel>*/}
+                {/*        <Herbaria/>*/}
+                {/*    </TabPanel>*/}
+                {/*    <TabPanel>*/}
+                {/*        <Datasets dataset="BR"/>*/}
+                {/*    </TabPanel>*/}
+                {/*    <TabPanel>*/}
+                {/*        <Datasets dataset="PR"/>*/}
+                {/*    </TabPanel>*/}
+                {/*    <TabPanel>*/}
+                {/*        <Datasets dataset="Regions"/>*/}
+                {/*    </TabPanel>*/}
+                {/*</TabPanels>*/}
+            {/*</Tabs>*/}
         </ThemeProvider>
     );
 }
