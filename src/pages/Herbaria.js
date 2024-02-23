@@ -4,11 +4,8 @@
 //
 // export default function Herbaria(){
 //     function TableHerbaria() {
-//         const options = {
-//             'Content-Type': 'application/json',
-//             'Accept': 'application/json'
-//         };
-//         const url = 'http://localhost:3000/piperaceae-dataset/data/herbaria.json';
+//         const ;
+//         const url = '';
 //         const { data, error, loading } = useFetch(url, options);
 //         if (loading) {
 //             return <p>Loading...</p>;
@@ -53,7 +50,12 @@ class Herbaria extends React.Component{
         super(props);
         this.state = {
             introduction: "This table contains all herbaria selected.",
-            theads: ["Acronym", "Count", "Name"]
+            url: "http://localhost:3000/piperaceae-dataset/data/herbaria.json",
+            theads: ["Acronym", "Count", "Name"],
+            header: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
         }
     }
 
