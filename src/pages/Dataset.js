@@ -162,7 +162,7 @@ class Dataset extends React.Component {
                         return (<Tr key={d.seq}>
                             <Td>{d.seq}</Td>
                             <Td>{d.genus_trusted}</Td>
-                            <Td>{d.specific_epithet_trusted}</Td>
+                            <Td><Text as="i">{d.specific_epithet_trusted}</Text></Td>
                             <Td>{d.urls.toString()}</Td>
                         </Tr>);
                     })}
@@ -180,7 +180,7 @@ class Dataset extends React.Component {
                 <Tbody>
                     {this.state.species.slice(0, 50).map((d) => {
                         return (<Tr key={d.seq}>
-                            <Td>{d.levels}</Td>
+                            <Td><Text as="i">{d.levels}</Text></Td>
                             <Td>{d.count}</Td>
                         </Tr>);
                     })}
