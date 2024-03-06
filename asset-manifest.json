@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/piperaceae-dataset/static/css/main.2c9c77ba.css",
-    "main.js": "/piperaceae-dataset/static/js/main.c2cb6006.js",
-    "static/js/453.43470b83.chunk.js": "/piperaceae-dataset/static/js/453.43470b83.chunk.js",
-    "static/media/HUEFS0214753.jpg": "/piperaceae-dataset/static/media/HUEFS0214753.d7d85acdeccc0600c606.jpg",
-    "static/media/HUEFS0214753.jpeg": "/piperaceae-dataset/static/media/HUEFS0214753.7eca21d0b4ce46ec7a53.jpeg",
-    "static/media/HUEFS0214753_manual.jpeg": "/piperaceae-dataset/static/media/HUEFS0214753_manual.00b152f85438feb77cc2.jpeg",
-    "static/media/courier-prime-latin-400-normal.woff2": "/piperaceae-dataset/static/media/courier-prime-latin-400-normal.9828a27d46cfbc788c63.woff2",
-    "static/media/HUEFS0214753_unet.jpeg": "/piperaceae-dataset/static/media/HUEFS0214753_unet.b89883e150dfcb8df25a.jpeg",
-    "static/media/courier-prime-latin-400-normal.woff": "/piperaceae-dataset/static/media/courier-prime-latin-400-normal.1d155ce17f82c7375483.woff",
-    "static/media/courier-prime-latin-ext-400-normal.woff2": "/piperaceae-dataset/static/media/courier-prime-latin-ext-400-normal.5f815ad51fabfda18bb0.woff2",
-    "static/media/HUEFS0214753_mask_manual.jpg": "/piperaceae-dataset/static/media/HUEFS0214753_mask_manual.f71cca763eff28caf2c1.jpg",
-    "static/media/HUEFS0214753_mask_unet.jpg": "/piperaceae-dataset/static/media/HUEFS0214753_mask_unet.7059528aa44b78edce72.jpg",
-    "static/media/courier-prime-latin-ext-400-normal.woff": "/piperaceae-dataset/static/media/courier-prime-latin-ext-400-normal.8cafd33ca5a5ca88061d.woff",
-    "index.html": "/piperaceae-dataset/index.html",
-    "main.2c9c77ba.css.map": "/piperaceae-dataset/static/css/main.2c9c77ba.css.map",
-    "main.c2cb6006.js.map": "/piperaceae-dataset/static/js/main.c2cb6006.js.map",
-    "453.43470b83.chunk.js.map": "/piperaceae-dataset/static/js/453.43470b83.chunk.js.map"
+    "main.css": "/w/piperaceae-dataset-B88C/static/css/main.ec4ee029.css",
+    "main.js": "/w/piperaceae-dataset-B88C/static/js/main.5853cd67.js",
+    "static/js/453.43470b83.chunk.js": "/w/piperaceae-dataset-B88C/static/js/453.43470b83.chunk.js",
+    "static/media/HUEFS0214753.jpg": "/w/piperaceae-dataset-B88C/static/media/HUEFS0214753.d7d85acdeccc0600c606.jpg",
+    "static/media/HUEFS0214753.jpeg": "/w/piperaceae-dataset-B88C/static/media/HUEFS0214753.7eca21d0b4ce46ec7a53.jpeg",
+    "static/media/HUEFS0214753_manual.jpeg": "/w/piperaceae-dataset-B88C/static/media/HUEFS0214753_manual.00b152f85438feb77cc2.jpeg",
+    "static/media/courier-prime-latin-400-normal.woff2": "/w/piperaceae-dataset-B88C/static/media/courier-prime-latin-400-normal.9828a27d46cfbc788c63.woff2",
+    "static/media/HUEFS0214753_unet.jpeg": "/w/piperaceae-dataset-B88C/static/media/HUEFS0214753_unet.b89883e150dfcb8df25a.jpeg",
+    "static/media/courier-prime-latin-400-normal.woff": "/w/piperaceae-dataset-B88C/static/media/courier-prime-latin-400-normal.1d155ce17f82c7375483.woff",
+    "static/media/courier-prime-latin-ext-400-normal.woff2": "/w/piperaceae-dataset-B88C/static/media/courier-prime-latin-ext-400-normal.5f815ad51fabfda18bb0.woff2",
+    "static/media/HUEFS0214753_mask_manual.jpg": "/w/piperaceae-dataset-B88C/static/media/HUEFS0214753_mask_manual.f71cca763eff28caf2c1.jpg",
+    "static/media/HUEFS0214753_mask_unet.jpg": "/w/piperaceae-dataset-B88C/static/media/HUEFS0214753_mask_unet.7059528aa44b78edce72.jpg",
+    "static/media/courier-prime-latin-ext-400-normal.woff": "/w/piperaceae-dataset-B88C/static/media/courier-prime-latin-ext-400-normal.8cafd33ca5a5ca88061d.woff",
+    "index.html": "/w/piperaceae-dataset-B88C/index.html",
+    "main.ec4ee029.css.map": "/w/piperaceae-dataset-B88C/static/css/main.ec4ee029.css.map",
+    "main.5853cd67.js.map": "/w/piperaceae-dataset-B88C/static/js/main.5853cd67.js.map",
+    "453.43470b83.chunk.js.map": "/w/piperaceae-dataset-B88C/static/js/453.43470b83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c9c77ba.css",
-    "static/js/main.c2cb6006.js"
+    "static/css/main.ec4ee029.css",
+    "static/js/main.5853cd67.js"
   ]
 }
